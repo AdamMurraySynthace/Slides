@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../reveal.js-3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js-3.3.0/css/theme/moon.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Page -->
+      <section>
+        <h2>
+          <span style="color: yellow;">Antha UI</span> Refactoring Proposals
+        </h2>
+      </section>
+
+      <!-- Contents -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h2>Contents</h2>
+        <ul>
+          <li>File Name Conventions // TODO</li>
+          <li>Folder Structure // TODO</li>
+          <li>JavaScript // TODO</li>
+          <li>ES2015 Classes</li>
+          <li>CSS // TODO</li>
+          <li>Laying Out HTML</li>
+        </ul>
+      </section>
+
+      <!-- File Name Conventions -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>File Name Conventions // TODO</h3>
+      </section>
+
+      <!-- Folder Structure -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>Folder Structure // TODO</h3>
+      </section>
+
+      <!-- JavaScript -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>JavaScript Conventions</h3>
+        <h4>Functions</h4>
+        <div>
+          <img src="my-cool-private-function.png" style="width: 35%;" />
+        </div>
+      </section>
+
+      <!-- ES2015 Classes -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>ES2015 Classes</h3>
+        <ul>
+          <li>
+            <span style="color: magenta;">Classes</span> should be named using <code style="color: yellow;">PascalCase</code>
+          </li>
+          <li>
+            <span style="color: magenta;">Class file names</span> should match the name of the class, e.g.
+            <code style="color: yellow;">MyNewClass.js</code>
+          </li>
+          <li>
+            There should only be <span style="color: magenta;">1 class per file</span>
+          </li>
+          <li>
+            Classes should contain a <span style="color: magenta;">comment block</span> above their definition which provides a short summary
+          </li>
+          <li>
+            <code style="color: yellow;">static</code> methods should be placed at the
+            <span style="color: magenta;">top of the class</span> (below the constructor) in alphabetical order
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>ES2015 Classes</h3>
+        <ul>
+          <li>
+            <span style="color: magenta;">Private</span> functions and variables should be prefixed with an underscore ( _ )
+          </li>
+          <li>
+            All methods should have a comment block above their definition which describes their function.
+            This should make use of <span style="color: magenta;">jsdoc</span> annotations to inidicate parameters and their type, related functions,
+            author, return value(s), access level (public, private), etc.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Laying Out HTML -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>Laying Out HTML</h3>
+        <!--<h4>Whitespace should be used to enhance readability and version control</h4>-->
+        <h4 style="color: #11ee44">Good</h4>
+        <div>
+          <img src="html-code-layout-good-3.png" style="width: 40%;" />
+        </div>
+      </section>
+      <section>
+        <h3>Laying Out HTML</h3>
+        <!--<h4>Whitespace should be used to enhance readability and version control</h4>-->
+        <h4 style="color: #ff2233">Bad</h4>
+        <div>
+          <img src="html-code-layout-bad.png" style="width: 100%;" />
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="../reveal.js-3.3.0/js/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+
+</html>
