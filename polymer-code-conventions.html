@@ -21,25 +21,73 @@
       <section>
         <h2>Contents</h2>
         <ul>
-          <li>File Name Conventions // TODO</li>
-          <li>Folder Structure // TODO</li>
-          <li>JavaScript // TODO</li>
+          <li>File Name Conventions</li>
+          <li>Folder Structure</li>
+          <li>Component Conventions</li>
+          <li>JavaScript Conventions</li>
           <li>ES2015 Classes</li>
-          <li>CSS // TODO</li>
           <li>Laying Out HTML</li>
+          <li>CSS // TODO</li>
         </ul>
       </section>
 
       <!-- File Name Conventions -->
       <!-- ------------------------------------------------ -->
       <section>
-        <h3>File Name Conventions // TODO</h3>
+        <h3>File Name Conventions</h3>
+        <ul>
+          <li>
+            <span style="color: magenta;">HTML files</span> should be <code style="color: yellow;">hyphen-delimited</code>,
+            e.g. <code style="color: yellow;">antha-ui.html</code>
+          </li>
+          <li>
+            <span style="color: magenta;">CSS files</span> should be <code style="color: yellow;">hyphen-delimited</code>,
+            e.g. <code style="color: yellow;">antha-ui.css</code> (to match up with its associated HTML file)
+          </li>
+          <li>
+            <span style="color: magenta;">ES2015 class files</span> should be <code style="color: yellow;">PascalCase</code>,
+            e.g. <code style="color: yellow;">MyClass.js</code> (to match the name of the class)
+          </li>
+          <li>
+            <span style="color: magenta;">Other JavaScript files</span> should be <code style="color: yellow;">camelCase</code>,
+            e.g. <code style="color: yellow;">someOtherCode.js</code>
+          </li>
+          <li>
+            <span style="color: magenta;">Markdown files</span> should be <code style="color: yellow;">UPPERCASE</code>,
+            e.g. <code style="color: yellow;">MY_COMPONENT.md</code>
+          </li>
+        </ul>
       </section>
 
       <!-- Folder Structure -->
       <!-- ------------------------------------------------ -->
       <section>
-        <h3>Folder Structure // TODO</h3>
+        <h3>Folder Structure</h3>
+        <div>
+          We should keep the folder structure as flat as possible - components should be siblings of one another, in general.
+          However, it might be a good idea to adopt a component prefix convention to distinguish component behaviour, e.g.;
+          presentational component, organisational component, data handling component, etc.
+        </div>
+      </section>
+
+      <!-- Component Conventions -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>Component Conventions</h3>
+        <ul>
+          <li>
+            Keep markup & CSS in one file. JavaScript should go in a separate file and imported (so it can be tested separately).
+          </li>
+          <li>
+            Use the object literal syntax for writing Polymer code, e.g. <code style="color: yellow;">Polymer({ ... })</code>
+          </li>
+          <li>
+            Use the underscore convention for private functions, e.g. <code style="color: yellow;">_thisIsAPrivateFunction</code>
+          </li>
+          <li>
+            Include a <code style="color: yellow;">README.md</code> with every component, giving an overview of the component, and documenting the public API
+          </li>
+        </ul>
       </section>
 
       <!-- JavaScript -->
@@ -47,8 +95,41 @@
       <section>
         <h3>JavaScript Conventions</h3>
         <h4>Functions</h4>
+        <ul>
+          <li>
+            Every function should include a comment block above its definition, describing the operation of the function,
+            its side effects (<code style="color: red;">@sideeffects</code>),
+            conversely whether it's pure (<code style="color: lightgreen;">@pure</code>), its parameters, return value, and info
+            on the function author.
+          </li>
+          <li>
+            For functions with more than one parameter, each parameter should be put on its own line. (Functions with only
+            one parameter should have their signatures all on one line).
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>JavaScript Conventions</h3>
+        <h4>Functions</h4>
+        <ul>
+          <li>
+            Functions should enforce argument types and throw errors when these are incorrect. This should be done especially
+            when an incorrect type will cause serious problems downstream.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>JavaScript Conventions</h3>
+        <h4>Functions (Examples)</h4>
         <div>
           <img src="my-cool-private-function.png" style="width: 35%;" />
+        </div>
+      </section>
+      <section>
+        <h3>JavaScript Conventions</h3>
+        <h4>Functions (Examples)</h4>
+        <div>
+          <img src="pure-and-sideeffects-jsdoc.png" style="width: 35%;" />
         </div>
       </section>
 
@@ -94,7 +175,32 @@
       <!-- ------------------------------------------------ -->
       <section>
         <h3>Laying Out HTML</h3>
-        <!--<h4>Whitespace should be used to enhance readability and version control</h4>-->
+        <ul>
+          <li>
+            For elements with <span style="color: magenta;">only one attribute</span> (or none),
+            the opening tag and attribute should be placed <span style="color: magenta;">on one line</span>
+          </li>
+          <li>
+            For elements with <span style="color: magenta;">more than one attribute</span>,
+            the opening tag and each attribute should be placed <span style="color: magenta;">on their own line</span>
+            (this is to enhance readability, and to make changes more obvious under version control)
+          </li>
+          <li>
+            <span style="color: magenta;">Boolean attributes</span> (i.e. those without a value)
+            should be grouped together at the <span style="color: magenta;">bottom of the list</span> of attributes
+          </li>
+          <li>
+            <span style="color: magenta;">Function attributes</span> (i.e. those which are passed in a function)
+            should be <span style="color: magenta;">grouped together</span>
+          </li>
+          <li>
+            The <span style="color: magenta;">class</span> attribute should be placed
+            <span style="color: magenta;">immediately after the element's opening tag</span>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Laying Out HTML</h3>
         <h4 style="color: #11ee44">Good</h4>
         <div>
           <img src="html-code-layout-good-3.png" style="width: 40%;" />
@@ -108,6 +214,17 @@
           <img src="html-code-layout-bad.png" style="width: 100%;" />
         </div>
       </section>
+
+      <!-- CSS -->
+      <!-- ------------------------------------------------ -->
+      <section>
+        <h3>CSS</h3>
+        <ul>
+          <li>
+          </li>
+        </ul>
+      </section>
+
     </div>
   </div>
   <script src="reveal.js-3.3.0/js/reveal.js"></script>
