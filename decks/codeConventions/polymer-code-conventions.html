@@ -2,8 +2,18 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="reveal.js-3.3.0/css/reveal.css">
-  <link rel="stylesheet" href="reveal.js-3.3.0/css/theme/moon.css">
+  <link rel="stylesheet" href="../../libs/reveal.js-3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="../../libs/reveal.js-3.3.0/css/theme/moon.css">
+
+  <style>
+    .highlight-1 {
+      color: #F7E3AF;
+    }
+
+    .highlight-2 {
+      color: #B0D0D3;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,8 +22,11 @@
       <!-- Title Page -->
       <section>
         <h2>
-          <span style="color: yellow;">Antha UI</span> Refactoring Proposals
+          Refactoring Proposals
         </h2>
+        <div>
+          <a href="../../index.html">Back to list</a>
+        </div>
       </section>
 
       <!-- Contents -->
@@ -37,24 +50,24 @@
         <h3>File Name Conventions</h3>
         <ul>
           <li>
-            <span style="color: magenta;">HTML files</span> should be <code style="color: yellow;">hyphen-delimited</code>,
-            e.g. <code style="color: yellow;">antha-ui.html</code>
+            <span class="highlight-2">HTML files</span> should be <code class="highlight-1">hyphen-delimited</code>,
+            e.g. <code class="highlight-1">antha-ui.html</code>
           </li>
           <li>
-            <span style="color: magenta;">CSS files</span> should be <code style="color: yellow;">hyphen-delimited</code>,
-            e.g. <code style="color: yellow;">antha-ui.css</code> (to match up with its associated HTML file)
+            <span class="highlight-2">CSS files</span> should be <code class="highlight-1">hyphen-delimited</code>,
+            e.g. <code class="highlight-1">antha-ui.css</code> (to match up with its associated HTML file)
           </li>
           <li>
-            <span style="color: magenta;">ES2015 class files</span> should be <code style="color: yellow;">PascalCase</code>,
-            e.g. <code style="color: yellow;">MyClass.js</code> (to match the name of the class)
+            <span class="highlight-2">ES2015 class files</span> should be <code class="highlight-1">PascalCase</code>,
+            e.g. <code class="highlight-1">MyClass.js</code> (to match the name of the class)
           </li>
           <li>
-            <span style="color: magenta;">Other JavaScript files</span> should be <code style="color: yellow;">camelCase</code>,
-            e.g. <code style="color: yellow;">someOtherCode.js</code>
+            <span class="highlight-2">Other JavaScript files</span> should be <code class="highlight-1">camelCase</code>,
+            e.g. <code class="highlight-1">someOtherCode.js</code>
           </li>
           <li>
-            <span style="color: magenta;">Markdown files</span> should be <code style="color: yellow;">UPPERCASE</code>,
-            e.g. <code style="color: yellow;">MY_COMPONENT.md</code>
+            <span class="highlight-2">Markdown files</span> should be <code class="highlight-1">UPPERCASE</code>,
+            e.g. <code class="highlight-1">MY_COMPONENT.md</code>
           </li>
         </ul>
       </section>
@@ -79,13 +92,13 @@
             Keep markup & CSS in one file. JavaScript should go in a separate file and imported (so it can be tested separately).
           </li>
           <li>
-            Use the object literal syntax for writing Polymer code, e.g. <code style="color: yellow;">Polymer({ ... })</code>
+            Use the object literal syntax for writing Polymer code, e.g. <code class="highlight-1">Polymer({ ... })</code>
           </li>
           <li>
-            Use the underscore convention for private functions, e.g. <code style="color: yellow;">_thisIsAPrivateFunction</code>
+            Use the underscore convention for private functions, e.g. <code class="highlight-1">_thisIsAPrivateFunction</code>
           </li>
           <li>
-            Include a <code style="color: yellow;">README.md</code> with every component, giving an overview of the component, and documenting the public API
+            Include a <code class="highlight-1">README.md</code> with every component, giving an overview of the component, and documenting the public API
           </li>
         </ul>
       </section>
@@ -97,10 +110,10 @@
         <h4>General</h4>
         <ul>
           <li>
-            Strings should be enclosed by single quotes (<code style="color: yellow;">''</code>) only. Double quotes should only be used inside of strings
+            Strings should be enclosed by single quotes (<code class="highlight-1">''</code>) only. Double quotes should only be used inside of strings
           </li>
           <li>
-            When testing for equality or inequality, the strict equality operators should be used: <code style="color: yellow;">===</code> and <code style="color: yellow;">!==</code>
+            When testing for equality or inequality, the strict equality operators should be used: <code class="highlight-1">===</code> and <code class="highlight-1">!==</code>
           </li>
         </ul>
       </section>
@@ -151,21 +164,21 @@
         <h3>ES2015 Classes</h3>
         <ul>
           <li>
-            <span style="color: magenta;">Classes</span> should be named using <code style="color: yellow;">PascalCase</code>
+            <span class="highlight-2">Classes</span> should be named using <code class="highlight-1">PascalCase</code>
           </li>
           <li>
-            <span style="color: magenta;">Class file names</span> should match the name of the class, e.g.
-            <code style="color: yellow;">MyNewClass.js</code>
+            <span class="highlight-2">Class file names</span> should match the name of the class, e.g.
+            <code class="highlight-1">MyNewClass.js</code>
           </li>
           <li>
-            There should only be <span style="color: magenta;">1 class per file</span>
+            There should only be <span class="highlight-2">1 class per file</span>
           </li>
           <li>
-            Classes should contain a <span style="color: magenta;">comment block</span> above their definition which provides a short summary
+            Classes should contain a <span class="highlight-2">comment block</span> above their definition which provides a short summary
           </li>
           <li>
-            <code style="color: yellow;">static</code> methods should be placed at the
-            <span style="color: magenta;">top of the class</span> (below the constructor) in alphabetical order
+            <code class="highlight-1">static</code> methods should be placed at the
+            <span class="highlight-2">top of the class</span> (below the constructor) in alphabetical order
           </li>
         </ul>
       </section>
@@ -173,11 +186,11 @@
         <h3>ES2015 Classes</h3>
         <ul>
           <li>
-            <span style="color: magenta;">Private</span> functions and variables should be prefixed with an underscore ( _ )
+            <span class="highlight-2">Private</span> functions and variables should be prefixed with an underscore ( _ )
           </li>
           <li>
             All methods should have a comment block above their definition which describes their function.
-            This should make use of <span style="color: magenta;">jsdoc</span> annotations to inidicate parameters and their type, related functions,
+            This should make use of <span class="highlight-2">jsdoc</span> annotations to inidicate parameters and their type, related functions,
             author, return value(s), access level (public, private), etc.
           </li>
         </ul>
@@ -189,25 +202,25 @@
         <h3>Laying Out HTML</h3>
         <ul>
           <li>
-            For elements with <span style="color: magenta;">only one attribute</span> (or none),
-            the opening tag and attribute should be placed <span style="color: magenta;">on one line</span>
+            For elements with <span class="highlight-2">only one attribute</span> (or none),
+            the opening tag and attribute should be placed <span class="highlight-2">on one line</span>
           </li>
           <li>
-            For elements with <span style="color: magenta;">more than one attribute</span>,
-            the opening tag and each attribute should be placed <span style="color: magenta;">on their own line</span>
+            For elements with <span class="highlight-2">more than one attribute</span>,
+            the opening tag and each attribute should be placed <span class="highlight-2">on their own line</span>
             (this is to enhance readability, and to make changes more obvious under version control)
           </li>
           <li>
-            <span style="color: magenta;">Boolean attributes</span> (i.e. those without a value)
-            should be grouped together at the <span style="color: magenta;">bottom of the list</span> of attributes
+            <span class="highlight-2">Boolean attributes</span> (i.e. those without a value)
+            should be grouped together at the <span class="highlight-2">bottom of the list</span> of attributes
           </li>
           <li>
-            <span style="color: magenta;">Function attributes</span> (i.e. those which are passed in a function)
-            should be <span style="color: magenta;">grouped together</span>
+            <span class="highlight-2">Function attributes</span> (i.e. those which are passed in a function)
+            should be <span class="highlight-2">grouped together</span>
           </li>
           <li>
-            The <span style="color: magenta;">class</span> attribute should be placed
-            <span style="color: magenta;">immediately after the element's opening tag</span>
+            The <span class="highlight-2">class</span> attribute should be placed
+            <span class="highlight-2">immediately after the element's opening tag</span>
           </li>
         </ul>
       </section>
@@ -239,7 +252,7 @@
 
     </div>
   </div>
-  <script src="reveal.js-3.3.0/js/reveal.js"></script>
+  <script src="../../libs/reveal.js-3.3.0/js/reveal.js"></script>
   <script>
     Reveal.initialize();
   </script>
