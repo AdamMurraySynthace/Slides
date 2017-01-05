@@ -34,9 +34,22 @@
       <!-- Pros -->
       <!-- ------------------------------------------------ -->
       <section>
-        <h3>Pros</h3>
+        <h3 style="color: limegreen">Pros</h3>
         <ul>
           <li>
+            Only have to support one browser (Chromium)
+          </li>
+          <li>
+            App runs in standalone browser instance, which helps to keep it secure
+          </li>
+          <li>
+            App can interact with native APIs to provide such things as native notifications
+          </li>
+          <li>
+            All app files are local so they will always be available, even offline (however this is not the case for API data)
+          </li>
+          <li>
+            Can be easily packaged for individual clients, giving specific functionality to each
           </li>
         </ul>
       </section>
@@ -44,9 +57,16 @@
       <!-- Cons -->
       <!-- ------------------------------------------------ -->
       <section>
-        <h3>Cons</h3>
+        <h3 style="color: red">Cons</h3>
         <ul>
           <li>
+            Any change to the codebase will require an update on the user's machine
+          </li>
+          <li>
+            Will cause a separation of UI and API (Swagger will no longer sit alongside UI)
+          </li>
+          <li>
+            May have implications if we want more mobile functionality - a desktop app, yet a mobile website. Might look strange
           </li>
         </ul>
       </section>
